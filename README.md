@@ -113,3 +113,6 @@ printf("You will need %d eggs \n", eggsRequired);
 printf("You will need %.2f grams of flour \n", flourRequired);
 printf("You will need %.3f mililiters of milk \n", milkRequired);
 ```
+### Examples
+
+Please consider looking inside blinmaker.c file. This is ready to use program which was built with usage of this library. blinmaker-original.c will give you the same result, but it performed in "raw" mode(e.g it do not use blinmaker.h library)
