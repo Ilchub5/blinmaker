@@ -1,9 +1,9 @@
 //Thanks Boris for original idea
 #include <stdio.h>
 #include "blinmaker.h"
-int eggsMin = 1;
-float milkMin = 200.0f; //mililiter
-float flourMin = 100.0f; //grams
+int eggsMin;
+float milkMin; //mililiter
+float flourMin; //grams
 float smallest;
 void main()
 {

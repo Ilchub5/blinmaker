@@ -1,6 +1,6 @@
-float flourMin;
-float milkMin;
-int eggsMin;
+int eggsMin = 1;
+float flourMin = 100.0f; 
+float milkMin = 200.0f;
 float SetMilkAmount(float milkAmount)
 {
     return milkAmount;
