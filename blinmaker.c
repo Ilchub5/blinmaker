@@ -1,52 +1,42 @@
 //Thanks Boris for original idea
 #include <stdio.h>
+#include "blinmaker.h"
+int eggsMin = 1;
+float milkMin = 200.0f; //mililiter
+float flourMin = 100.0f; //grams
+float smallest;
 void main()
 {
-    float flourAmount, milkAmount;
-    int eggsAmount;
-    int eggsMin = 1;
-    float milkMin = 200.0f; //mililiter
-    float flourMin = 100.0f; //grams
-    float smallest;
     printf("Blinmaker is starting up... \n");
     //Eggs
     printf("How many eggs do you have? ");
+    int eggsAmount;
     scanf("%d", &eggsAmount);
+    eggsAmount = SetEggsAmount(eggsAmount);
     printf("You have %d eggs \n", eggsAmount);
     //Milk
     printf("How many milk do you have? ");
+    float milkAmount;
     scanf("%f", &milkAmount);
+    milkAmount = SetMilkAmount(milkAmount);
     printf("You have %.3f ml of milk \n", milkAmount);
     //Flour
     printf("How many flour do you have? ");
+    float flourAmount;
     scanf("%f", &flourAmount);
+    flourAmount = SetFlourAmount(flourAmount);
     printf("You have %.2f gr of flour \n", flourAmount);
+    //Calculations
     if(flourAmount<flourMin || milkAmount<milkMin || eggsAmount<eggsMin)
-    {
+    {   
         printf("No blins today :( \n");
-    }
-    else
-    {
-        flourAmount = flourAmount / flourMin;
-        eggsAmount = eggsAmount / eggsMin;
-        milkAmount = milkAmount / milkMin;
-        if(flourAmount<=milkAmount && flourAmount<=eggsAmount)
-        {
-            printf("You can make %.0f blins \n", flourAmount*4);
-            smallest = flourAmount;
-        }
-        else if(milkAmount<=flourAmount && milkAmount<=eggsAmount)
-        {
-            printf("You can make %.0f blins \n", milkAmount*4);
-            smallest = milkAmount;
-        }
-        else if(eggsAmount<=flourAmount && eggsAmount<=milkAmount)
-        {
-            printf("You can make %d blins \n", eggsAmount*4);
-            smallest = eggsAmount;
-        }
-    }
-    printf("You will need %.0f eggs \n", smallest*eggsMin);
-    printf("You will need %.2f grams of flour \n", smallest*flourMin);
-    printf("You will need %.3f mililiters of milk \n", smallest*milkMin);
+    }   
+    float blinAmount = FindBlinAmount(flourAmount, milkAmount, eggsAmount);
+    int eggsRequired;
+    float flourRequired, milkRequired;
+    FindMaterialsAmount(flourAmount, milkAmount, eggsAmount, &eggsRequired, &flourRequired, &milkRequired);
+    printf("You will need %d eggs \n", eggsRequired);
+    printf("You will need %.2f grams of flour \n", flourRequired);
+    printf("You will need %.3f mililiters of milk \n", milkRequired);
+    printf("You can make %.0f blins \n", blinAmount);
 }
