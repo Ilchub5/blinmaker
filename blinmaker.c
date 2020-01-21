@@ -7,6 +7,7 @@ void main()
     int eggsMin = 1;
     float milkMin = 200.0f; //mililiter
     float flourMin = 100.0f; //grams
+    float smallest;
     printf("Blinmaker is starting up... \n");
     //Eggs
     printf("How many eggs do you have? ");
@@ -32,14 +33,20 @@ void main()
         if(flourAmount<=milkAmount && flourAmount<=eggsAmount)
         {
             printf("You can make %.0f blins \n", flourAmount*4);
+            smallest = flourAmount;
         }
         else if(milkAmount<=flourAmount && milkAmount<=eggsAmount)
         {
             printf("You can make %.0f blins \n", milkAmount*4);
+            smallest = milkAmount;
         }
         else if(eggsAmount<=flourAmount && eggsAmount<=milkAmount)
         {
             printf("You can make %d blins \n", eggsAmount*4);
+            smallest = eggsAmount;
         }
     }
+    printf("You will need %.0f eggs \n", smallest*eggsMin);
+    printf("You will need %.2f grams of flour \n", smallest*flourMin);
+    printf("You will need %.3f mililiters of milk \n", smallest*milkMin);
 }
