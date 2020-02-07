@@ -32,17 +32,17 @@ void main()
         milkAmount = milkAmount / milkMin;
         if(flourAmount<=milkAmount && flourAmount<=eggsAmount)
         {
-            printf("You can make %.0f blins \n", flourAmount*4);
+            printf("You can make %.0f blins \n", flourAmount*6);
             smallest = flourAmount;
         }
         else if(milkAmount<=flourAmount && milkAmount<=eggsAmount)
         {
-            printf("You can make %.0f blins \n", milkAmount*4);
+            printf("You can make %.0f blins \n", milkAmount*6;
             smallest = milkAmount;
         }
         else if(eggsAmount<=flourAmount && eggsAmount<=milkAmount)
         {
-            printf("You can make %d blins \n", eggsAmount*4);
+            printf("You can make %d blins \n", eggsAmount*6);
             smallest = eggsAmount;
         }
         printf("You will need %.0f eggs \n", smallest*eggsMin);

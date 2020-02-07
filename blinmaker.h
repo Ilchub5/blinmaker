@@ -54,17 +54,17 @@ float FindBlinAmount(float flourAmount, float milkAmount, int eggsAmount)
     float smallest;
     if(flourAmount<=milkAmount && flourAmount<=eggsAmount)
     {   
-        return flourAmount * 4;
+        return flourAmount * 6;
         smallest = flourAmount;
     }   
     else if(milkAmount<=flourAmount && milkAmount<=eggsAmount)
     {   
-        return milkAmount * 4;
+        return milkAmount * 6;
         smallest = milkAmount;
     }   
     else if(eggsAmount<=flourAmount && eggsAmount<=milkAmount)
     {   
-        return eggsAmount * 4;
+        return eggsAmount * 6;
         smallest = eggsAmount;
     }   
 }
