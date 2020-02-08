@@ -1,6 +1,6 @@
-int eggsMin = 1;
-float flourMin = 100.0f; 
-float milkMin = 200.0f;
+#define eggsMin 1
+#define flourMin 100.0f 
+#define milkMin 200.0f
 float SetMilkAmount(float milkAmount)
 {
     return milkAmount;
