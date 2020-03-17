@@ -46,7 +46,7 @@ int GetEggsAmount(int eggsAmount)
         return -1; 
     }   
 }
-float FindBlinAmount(float flourAmount, float milkAmount, int eggsAmount)
+int FindBlinAmount(float flourAmount, float milkAmount, int eggsAmount)
 {
     flourAmount = flourAmount / flourMin;
     eggsAmount = eggsAmount / eggsMin;

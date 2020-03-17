@@ -1,4 +1,4 @@
-//Thanks Boris for original idea
+//Thanks Boris for original idea 
 #include <stdio.h>
 #include "blinmaker.h"
 float smallest;
@@ -28,12 +28,12 @@ void main()
     {   
         printf("No blins today :( \n");
     }   
-    float blinAmount = FindBlinAmount(flourAmount, milkAmount, eggsAmount);
+    int blinAmount = FindBlinAmount(flourAmount, milkAmount, eggsAmount);
     int eggsRequired;
     float flourRequired, milkRequired;
     FindMaterialsAmount(flourAmount, milkAmount, eggsAmount, &eggsRequired, &flourRequired, &milkRequired);
     printf("You will need %d eggs \n", eggsRequired);
     printf("You will need %.2f grams of flour \n", flourRequired);
     printf("You will need %.3f mililiters of milk \n", milkRequired);
-    printf("You can make %.0f blins \n", blinAmount);
+    printf("You can make %d blins \n", blinAmount);
 }
